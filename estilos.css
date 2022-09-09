@@ -1,0 +1,39 @@
+.a, .b, .c {
+	width: 25%;
+	height: 100px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.a{
+	background: red;
+	margin-left: 10%;/*Para centrarlo aproximadamente*/
+	box-shadow: 10px 10px 5px grey;
+	
+}
+div:nth-child(3) {background-color: yellowgreen;} /*el 3º hijo*/
+/*nth-last-child(2) {background-color: grey;} el segundo hijo contando desde el último*/
+
+p::selection{background-color: pink; color: yellow;}/*para cambiar la caracterítica del navegador 
+cuando se selcciona un texto*/
+
+.b{
+	background: green;
+	text-shadow: 2px 3px 2px grey;
+}
+.c{
+	background: orange;
+	text-shadow: 2px 2px 1px grey;
+}
+/*Le estamos diciendo que hasta el max de 618px se comporte de la siguiente 
+manera*/
+@media (max-width: 618px)
+{
+	.a, .b, .c{
+		width: 80%;
+		height: 50px;
+		display: block;
+		float: none; /*para quitar el float y no flote al lado y baje*/
+		margin-left: 10%;/*Para que todos los elementos se pongan en línea y tengan el mismo margen*/
+	}
+}
